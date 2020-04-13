@@ -9,6 +9,7 @@ const CounterContainer = () => {
   return (
     <div>
       counter: {counter}
+      <br />
       <button onClick={() => dispatch(incrementCounter())}>+</button>{' '}
       <button onClick={() => dispatch(decrementCounter())}>-</button>
     </div>
