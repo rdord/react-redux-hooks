@@ -1,8 +1,19 @@
 import React from 'react';
-import CounterContainer from '../containers/CounterContainer';
+import { useSelector, useDispatch } from 'react-redux';
+import { incrementCounter, decrementCounter } from '../actions';
 
-const Counter = ({ children }) => {
-  return <CounterContainer>{children}</CounterContainer>;
+const Counter = () => {
+  const counter = useSelector(state => state.counter.counterValue);
+  const dispatch = useDispatch();
+
+  return (
+    <div>
+      counter: {counter}
+      <br />
+      <button onClick={() => dispatch(incrementCounter())}>+</button>{' '}
+      <button onClick={() => dispatch(decrementCounter())}>-</button>
+    </div>
+  );
 };
 
 export default Counter;
