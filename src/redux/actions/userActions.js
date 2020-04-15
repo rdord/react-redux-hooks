@@ -1,4 +1,4 @@
-import { FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from './types';
+import { FETCH_USERS_REQUEST, FETCH_USERS_SUCCESS, FETCH_USERS_FAILURE } from '../types';
 
 export const fetchUsersRequest = () => ({ type: FETCH_USERS_REQUEST });
 export const fetchUsersSuccess = users => ({ type: FETCH_USERS_SUCCESS, payload: users });
